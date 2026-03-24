@@ -23,12 +23,10 @@ theme = 'PaperMod'
   showtoc = true
   tocopen = false
   
-  # 动画增强
-  customCSS = ["css/extended/extended.css"]
-  customJS = ["js/earth3d.js"]
+  # 动画增强 - PaperMod 使用 assets 目录
+  customCSS = ["extended/extended.css"]
   
-  # 首页动画
-  animateCSS = true
+  # 在 head 中添加自定义 HTML 来加载 JS
 
   # 导航栏头像
   ShowNavAvatar = true
