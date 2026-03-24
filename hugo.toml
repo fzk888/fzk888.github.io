@@ -22,7 +22,18 @@ theme = 'PaperMod'
   hideSummary = false
   showtoc = true
   tocopen = false
+  
+  # 动画增强
+  customCSS = ["css/extended/extended.css"]
+  customJS = ["js/earth3d.js"]
+  
+  # 首页动画
+  animateCSS = true
 
+  # 导航栏头像
+  ShowNavAvatar = true
+  NavAvatarURL = "https://ui-avatars.com/api/?name=泽铠&background=0D8ABC&color=fff&size=128"
+  
   # 社交链接
   [[params.socialIcons]]
     name = "github"
@@ -31,6 +42,10 @@ theme = 'PaperMod'
   [[params.socialIcons]]
     name = "email"
     url = "mailto:your-email@example.com"
+  
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
 
   # 首页个人信息
   [params.profileMode]
