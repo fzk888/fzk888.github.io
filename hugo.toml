@@ -59,10 +59,16 @@ theme = 'PaperMod'
   weight = 1
 
 [[menu.main]]
+  identifier = "diary"
+  name = "碎碎念"
+  url = "/diary/"
+  weight = 2
+
+[[menu.main]]
   identifier = "about"
   name = "关于"
   url = "/about/"
-  weight = 2
+  weight = 3
 
 # 构建配置
 [build]
