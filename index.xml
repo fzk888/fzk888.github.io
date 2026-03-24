@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>泽铠的博客</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on 泽铠的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>泽铠的博客</title><link>https://fzk888.github.io/</link><description>Recent content on 泽铠的博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 24 Mar 2026 16:10:00 +0800</lastBuildDate><atom:link href="https://fzk888.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World 🌍</title><link>https://fzk888.github.io/posts/hello-world/</link><pubDate>Tue, 24 Mar 2026 16:10:00 +0800</pubDate><guid>https://fzk888.github.io/posts/hello-world/</guid><description>我的第一篇博客文章</description></item><item><title>关于我</title><link>https://fzk888.github.io/about/</link><pubDate>Tue, 24 Mar 2026 16:10:00 +0800</pubDate><guid>https://fzk888.github.io/about/</guid><description>关于泽铠的个人介绍</description></item></channel></rss>
