@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>生活 on 泽铠的博客</title><link>https://fzk888.github.io/categories/%E7%94%9F%E6%B4%BB/</link><description>Recent content in 生活 on 泽铠的博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 24 Mar 2026 16:10:00 +0800</lastBuildDate><atom:link href="https://fzk888.github.io/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World 🌍</title><link>https://fzk888.github.io/posts/hello-world/</link><pubDate>Tue, 24 Mar 2026 16:10:00 +0800</pubDate><guid>https://fzk888.github.io/posts/hello-world/</guid><description>我的第一篇博客文章</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活 on 泽铠的博客</title>
+    <link>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on 泽铠的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 24 Mar 2026 16:10:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World 🌍</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Tue, 24 Mar 2026 16:10:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;h2 id=&#34;你好世界&#34;&gt;你好，世界！&lt;/h2&gt;&#xA;&lt;p&gt;这是我的第一篇博客文章。从今天开始，我将在这里记录：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;💻 技术学习与实践&lt;/li&gt;&#xA;&lt;li&gt;📚 阅读心得与思考&lt;/li&gt;&#xA;&lt;li&gt;🌱 生活点滴与感悟&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;关于这个博客&#34;&gt;关于这个博客&lt;/h2&gt;&#xA;&lt;p&gt;这个博客使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;PaperMod&lt;/a&gt; 主题搭建，托管在 GitHub Pages 上。&lt;/p&gt;&#xA;&lt;h3 id=&#34;为什么开始写博客&#34;&gt;为什么开始写博客？&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;记录成长&lt;/strong&gt; - 技术学习的过程需要记录&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;分享知识&lt;/strong&gt; - 帮助同样在学习的人&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;整理思路&lt;/strong&gt; - 写作是最好的思考方式&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;未来计划&#34;&gt;未来计划&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;每周至少更新 1 篇文章&lt;/li&gt;&#xA;&lt;li&gt;分享技术教程和心得&lt;/li&gt;&#xA;&lt;li&gt;记录生活中的有趣事物&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;感谢你的访问！🙏&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;种一棵树最好的时间是十年前，其次是现在。&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>
