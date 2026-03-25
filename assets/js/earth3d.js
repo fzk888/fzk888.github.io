@@ -1,89 +1,89 @@
 /**
- * 3D 地球特效
- * 使用 Three.js 创建旋转的 3D 地球
+ * 3D 地球特效 - 使用 Three.js
+ * 显示在首页标题旁边
  */
+(function () {
+  'use strict';
 
-(function() {
-  // 检查是否在首页
-  if (!document.querySelector('.home-title')) return;
-  
-  const title = document.querySelector('.home-title');
-  const earthEmoji = title.querySelector('.earth-3d-wrap');
-  if (!earthEmoji) return;
-  
-  // 创建 canvas
-  const canvas = document.createElement('canvas');
-  canvas.className = 'earth-3d-canvas';
-  canvas.style.cssText = 'width: 30px; height: 30px; display: inline-block; vertical-align: middle;';
-  earthEmoji.appendChild(canvas);
-  
-  // 加载 Three.js
-  const script = document.createElement('script');
-  script.src = 'https://unpkg.com/three@0.160.0/build/three.min.js';
-  script.async = true;
-  
-  script.onload = function() {
-    initEarth();
-  };
-  
-  document.head.appendChild(script);
-  
   function initEarth() {
-    const THREE = window.THREE;
+    // 只在首页运行
+    var titleEl = document.querySelector('.profile_inner h1');
+    if (!titleEl) return;
+
+    // 创建容器
+    var container = document.createElement('span');
+    container.id = 'earth-container';
+    titleEl.appendChild(container);
+
+    var canvas = document.createElement('canvas');
+    container.appendChild(canvas);
+
+    var THREE = window.THREE;
     if (!THREE) return;
-    
+
     // 场景
-    const scene = new THREE.Scene();
-    
-    // 相机
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    camera.position.z = 2;
-    
-    // 渲染器
-    const renderer = new THREE.WebGLRenderer({ 
-      canvas: canvas, 
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+    camera.position.z = 2.5;
+
+    var renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
       alpha: true,
-      antialias: true 
+      antialias: true
     });
-    renderer.setSize(60, 60);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    
-    // 地球几何体
-    const geometry = new THREE.SphereGeometry(0.8, 32, 32);
-    
-    // 材质
-    const textureLoader = new THREE.TextureLoader();
-    const material = new THREE.MeshPhongMaterial({
+    renderer.setSize(90, 90);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // 地球
+    var geometry = new THREE.SphereGeometry(0.8, 32, 32);
+    var textureLoader = new THREE.TextureLoader();
+
+    var material = new THREE.MeshPhongMaterial({
       map: textureLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg'),
       specularMap: textureLoader.load('https://threejs.org/examples/textures/planets/earth_specular_2048.jpg'),
-      normalMap: textureLoader.load('https://threejs.org/examples/textures/planets/earth_normal_map_2048.jpg'),
       shininess: 15
     });
-    
-    const earth = new THREE.Mesh(geometry, material);
+
+    var earth = new THREE.Mesh(geometry, material);
     scene.add(earth);
-    
+
     // 灯光
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
-    
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(5, 3, 5);
-    scene.add(directionalLight);
-    
-    // 动画
+    scene.add(new THREE.AmbientLight(0x667eea, 0.4));
+    var dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(5, 3, 5);
+    scene.add(dirLight);
+
+    // 旋转速度
+    var baseSpeed = 0.004;
+    var speed = baseSpeed;
+
+    // 鼠标悬浮加速
+    container.addEventListener('mouseenter', function () { speed = 0.02; });
+    container.addEventListener('mouseleave', function () { speed = baseSpeed; });
+
+    // 动画循环
     function animate() {
       requestAnimationFrame(animate);
-      earth.rotation.y += 0.005;
+      earth.rotation.y += speed;
       renderer.render(scene, camera);
     }
-    
     animate();
-    
-    // 响应窗口大小变化
-    window.addEventListener('resize', function() {
-      const size = Math.min(60, Math.min(canvas.parentElement.offsetWidth, 60));
-      renderer.setSize(size, size);
+  }
+
+  // 等待 Three.js 加载完成后初始化
+  function waitForThree() {
+    if (window.THREE) {
+      initEarth();
+    } else {
+      setTimeout(waitForThree, 100);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(waitForThree, 200);
     });
+  } else {
+    setTimeout(waitForThree, 200);
   }
 })();

@@ -7,8 +7,9 @@ theme = 'PaperMod'
   env = "production"
   description = "记录技术、生活与思考"
   author = "泽铠"
+  defaultTheme = "dark"
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
@@ -22,49 +23,49 @@ theme = 'PaperMod'
   hideSummary = false
   showtoc = true
   tocopen = false
-  
-  # 动画增强 - PaperMod 使用 assets 目录
-  customCSS = ["extended/extended.css"]
-  
-  # 在 head 中添加自定义 HTML 来加载 JS
 
-  # 导航栏头像
-  ShowNavAvatar = true
-  NavAvatarURL = "https://ui-avatars.com/api/?name=泽铠&background=0D8ABC&color=fff&size=128"
-  
   # 社交链接
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/fzk888"
-  
+
   [[params.socialIcons]]
     name = "email"
     url = "mailto:your-email@example.com"
-  
+
   [[params.socialIcons]]
     name = "rss"
     url = "/index.xml"
 
-  # 首页个人信息
+  # 首页 Profile 模式
   [params.profileMode]
     enabled = true
-    title = "泽凯的博客"
+    title = "泽铠的博客"
     subtitle = "记录技术、生活与思考"
-    imageUrl = "https://ui-avatars.com/api/?name=泽铠&background=0D8ABC&color=fff&size=256"
+    imageUrl = "https://ui-avatars.com/api/?name=ZK&background=667eea&color=fff&size=256&bold=true&font-size=0.4"
     imageWidth = 150
     imageHeight = 150
     imageTitle = "泽铠"
-    
-    # 首页按钮
+
     [[params.profileMode.buttons]]
       name = "文章"
       url = "posts"
-    
+
     [[params.profileMode.buttons]]
       name = "关于"
       url = "about"
 
-# 菜单配置
+  # 搜索配置
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+# 菜单
 [[menu.main]]
   identifier = "posts"
   name = "文章"
@@ -78,15 +79,21 @@ theme = 'PaperMod'
   weight = 2
 
 [[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 3
+
+[[menu.main]]
   identifier = "about"
   name = "关于"
   url = "/about/"
-  weight = 3
+  weight = 4
 
-# 构建配置
+# 构建
 [build]
   writeStats = true
 
-# 输出配置
+# 输出
 [outputs]
   home = ["HTML", "RSS", "JSON"]
