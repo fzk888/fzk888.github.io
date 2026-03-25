@@ -1,0 +1,74 @@
+<div class="profile blog-hero">
+    {{- with site.Params.profileMode }}
+    {{- $heroTitle := .title | default site.Title -}}
+    {{- $heroSubtitle := .subtitle | default site.Params.description -}}
+    {{- $heroImage := .imageUrl | default "/avatar.png" -}}
+    {{- $img := "" -}}
+    {{- if and $heroImage (not (urls.Parse $heroImage).IsAbs) }}
+        {{- $img = resources.Get $heroImage }}
+    {{- end }}
+    {{- $mainSections := site.Params.mainSections | default (slice "posts") -}}
+    {{- $postCount := len (where site.RegularPages "Section" "in" $mainSections) -}}
+    <div class="blog-hero__backdrop" aria-hidden="true">
+        <span class="blog-hero__glow blog-hero__glow--one animate__animated animate__fadeIn"></span>
+        <span class="blog-hero__glow blog-hero__glow--two animate__animated animate__fadeIn animate__delay-1s"></span>
+        <span class="blog-hero__grid animate__animated animate__fadeIn animate__slow"></span>
+    </div>
+    <div class="profile_inner blog-hero__inner">
+        <section class="blog-hero__intro">
+            <div class="blog-hero__eyebrow animate__animated animate__fadeInDown">
+                <span class="blog-hero__eyebrow-dot"></span>
+                {{ site.Title }}
+            </div>
+            <h1 class="blog-hero__title animate__animated animate__fadeInUp">{{ $heroTitle | markdownify }}</h1>
+            <div class="blog-hero__description animate__animated animate__fadeInUp animate__fast" style="--animate-delay: 120ms;">
+                {{ $heroSubtitle | markdownify }}
+            </div>
+            <div class="blog-hero__chips animate__animated animate__fadeInUp animate__fast" style="--animate-delay: 220ms;">
+                <span>品牌运营</span>
+                <span>{{ $postCount }} 篇内容沉淀</span>
+                <span>AI 应用 · 技术探索</span>
+            </div>
+            <div class="blog-hero__actions animate__animated animate__fadeInUp animate__fast" style="--animate-delay: 320ms;">
+                <a class="blog-hero__action blog-hero__action--primary" href="{{ "/posts/" | absURL }}">浏览文章</a>
+                <a class="blog-hero__action blog-hero__action--ghost" href="{{ "/about/" | absURL }}">关于我</a>
+            </div>
+            <div class="blog-hero__social animate__animated animate__fadeInUp animate__fast" style="--animate-delay: 420ms;">
+                {{- partial "social_icons.html" (dict "align" "left") -}}
+            </div>
+        </section>
+
+        <aside class="blog-hero__panel animate__animated animate__fadeInRight">
+            <div class="blog-hero__portrait">
+                {{- if $img }}
+                <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" loading="eager" />
+                {{- else }}
+                <img draggable="false" src="{{ $heroImage | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" loading="eager" />
+                {{- end }}
+                <span class="blog-hero__portrait-tag">Personal Blog</span>
+            </div>
+            <div class="blog-hero__panel-card animate__animated animate__fadeInUp animate__fast" style="--animate-delay: 260ms;">
+                <span class="blog-hero__panel-label">EXPLORE</span>
+                <h2>搜索站内内容</h2>
+                <p>输入关键词，快速定位文章、碎碎念和项目记录。</p>
+                <div class="home-search" id="home-search">
+                    <form class="blog-hero__search-form" action="{{ "search/" | absURL }}" method="get">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20L16.65 16.65"></path></svg>
+                        <input type="search" name="query" placeholder="搜索文章、项目、碎碎念..." autocomplete="off">
+                        <button type="submit">搜索</button>
+                    </form>
+                </div>
+                <div class="blog-hero__quicklinks">
+                    {{- range site.Menus.main }}
+                    {{- if not .Parent }}
+                    <a class="blog-hero__quicklink" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                    {{- end }}
+                    {{- end }}
+                </div>
+            </div>
+        </aside>
+    </div>
+    {{- end}}
+</div>

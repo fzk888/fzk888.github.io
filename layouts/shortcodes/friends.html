@@ -1,0 +1,11 @@
+<div class="friends-grid">
+{{ range .Params.friends }}
+<a class="friend-card" href="{{ .url }}" target="_blank" rel="noopener">
+    <img class="friend-card__avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy">
+    <div>
+        <div class="friend-card__name">{{ .name }}</div>
+        <div class="friend-card__desc">{{ .desc }}</div>
+    </div>
+</a>
+{{ end }}
+</div>

@@ -1,15 +1,6 @@
-{{- /* 自定义 head - 赛博朋克主题 */ -}}
-
-{{- /* Three.js - 仅首页加载 */ -}}
-{{- if .IsHome -}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-{{- end -}}
+{{- /* Animate.css */ -}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
 
 {{- /* 自定义 JS */ -}}
 {{ $custom := resources.Get "js/custom.js" | minify | fingerprint }}
 <script src="{{ $custom.RelPermalink }}" defer></script>
-
-{{- if .IsHome -}}
-{{ $earth := resources.Get "js/earth3d.js" | minify | fingerprint }}
-<script src="{{ $earth.RelPermalink }}" defer></script>
-{{- end -}}
