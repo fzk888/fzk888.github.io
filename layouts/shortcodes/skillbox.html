@@ -1,5 +1,5 @@
 <div class="skillbox">
-{{ range .Params.skills }}
+{{ range .Page.Params.skills }}
 <div class="skill-item">
     <div class="skill-name"><span>{{ .name }}</span><span>{{ .level }}%</span></div>
     <div class="skill-bar"><div class="skill-bar-fill" style="width: {{ .level }}%"></div></div>

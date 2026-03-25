@@ -1,5 +1,5 @@
 <div class="project-grid">
-{{ range .Params.projects }}
+{{ range .Page.Params.projects }}
 <div class="project-card">
     <div class="project-card__title">{{ .title }}</div>
     <div class="project-card__desc">{{ .desc | markdownify }}</div>

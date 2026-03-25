@@ -1,5 +1,5 @@
 <div class="friends-grid">
-{{ range .Params.friends }}
+{{ range .Page.Params.friends }}
 <a class="friend-card" href="{{ .url }}" target="_blank" rel="noopener">
     <img class="friend-card__avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy">
     <div>
