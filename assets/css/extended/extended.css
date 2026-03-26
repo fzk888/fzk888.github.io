@@ -280,10 +280,27 @@
 .menu-item:hover > .sub-menu, .menu-item:focus-within > .sub-menu {
   opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
 }
-.sub-menu li { list-style: none; }
+.sub-menu li {
+  list-style: none;
+  display: block;
+  margin: 0 !important;
+  width: 100%;
+}
+.sub-menu li + li {
+  margin-inline-start: 0 !important;
+}
 .sub-menu a {
-  display: block; padding: 10px 16px; border-radius: 12px; font-size: .92rem;
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: .92rem;
+  line-height: 1.4;
+  white-space: nowrap;
   transition: background .15s ease;
+}
+.sub-menu a span {
+  display: block;
 }
 .sub-menu a:hover { background: rgba(102,126,234,.08); }
 
