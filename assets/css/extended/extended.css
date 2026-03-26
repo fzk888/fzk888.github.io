@@ -70,7 +70,7 @@
 /* ===== Hero 内部布局 ===== */
 .blog-hero__inner {
   position: relative; z-index: 1; display: block; width: 100%;
-  min-height: inherit; padding-top: clamp(6px,1vw,18px);
+  min-height: inherit; padding-top: clamp(32px,5vw,64px);
   padding-right: min(41vw,470px);
 }
 .blog-hero__intro {
@@ -92,7 +92,7 @@
 }
 .blog-hero__title {
   margin: 0; color: rgb(15,23,42);
-  font-size: clamp(3.2rem,8vw,6rem); line-height: .94;
+  font-size: clamp(3.6rem,9vw,6.8rem); line-height: .94;
   letter-spacing: -.06em; max-width: 9ch; text-wrap: balance;
 }
 .blog-hero__title p { margin: 0; }
@@ -120,11 +120,14 @@
 .blog-hero__action:hover { transform: translateY(-2px); }
 .blog-hero__action--primary {
   color: #fff; background: linear-gradient(135deg,#667eea,#764ba2);
-  box-shadow: 0 20px 38px rgba(102,126,234,.22);
+  box-shadow: 0 20px 38px rgba(102,126,234,.28);
+}
+.blog-hero__action--primary:hover {
+  box-shadow: 0 24px 48px rgba(102,126,234,.35);
 }
 .blog-hero__action--ghost {
-  color: rgb(30,41,59); background: rgba(255,255,255,.64);
-  border: 1px solid rgba(102,126,234,.18);
+  color: rgb(30,41,59); background: rgba(255,255,255,.72);
+  border: 1px solid rgba(102,126,234,.2);
 }
 
 /* 社交图标 */
