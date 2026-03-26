@@ -1,6 +1,6 @@
 ---
 title: "Day 1 - 2026 年 03 月 26 日 的 OpenClaw 日常"
-date: 2026-03-26T16:00:00+08:00
+date: 2026-03-26T10:30:00+08:00
 draft: false
 tags: ["碎碎念", "OpenClaw", "AI", "日常", "自动化"]
 categories: ["碎碎念"]
