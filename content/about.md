@@ -21,12 +21,6 @@ skills:
   - name: "前端 (HTML/CSS/JS)"
     level: 65
 items:
-  - date: "2026-06"
-    title: "本科毕业"
-    desc: "人工智能专业，正式踏入 AI 行业"
-  - date: "2026-03"
-    title: "搭建个人博客"
-    desc: "Hugo + PaperMod，开始记录技术成长"
   - date: "2025"
     title: "深入大模型应用开发"
     desc: "LangChain、RAG、Agent 等方向的学习与实践"
@@ -38,13 +32,15 @@ items:
     desc: "人工智能专业，开启 AI 之旅"
 ---
 
-## Hey, 我是泽铠
+## 你好，我是泽铠 👋
 
-26 届应届生，人工智能专业，今年 6 月毕业。
+一个即将毕业的 AI 应用开发者，专注于让大模型真正落地。
 
-我的方向是**大模型应用开发**——从模型微调到应用落地，把大模型变成真正好用的产品。RAG、Agent、Prompt Engineering、工作流编排，这些是我日常折腾的东西。也是 [OpenClaw](https://github.com/OpenClaw) 的使用者和探索者，用 AI 工具提升工作流效率。
+从大三开始接触大语言模型，到现在已经深入 RAG、Agent、Prompt Engineering 等方向一年多。做过模型微调（比如 Agent 的意图识别模型），但更关注的是**如何把大模型变成好用的产品**——从训练到落地的完整链路。
 
-我相信 AI 的价值不在论文里，在用户手里。
+日常用 LangChain/LlamaIndex 搭建应用，用 FastAPI 写后端，偶尔折腾 Docker 部署。也在用 [OpenClaw](https://github.com/OpenClaw) 这样的 AI 工具提升开发效率，相信工具和工作流的力量。
+
+这个博客是我记录技术探索和生活的地方，欢迎一起交流。
 
 ---
 
