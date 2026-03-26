@@ -204,7 +204,7 @@
 }
 
 /* 快捷导航 */
-.blog-hero__quicklinks { display: flex; flex-wrap: wrap; gap: 10px; }
+.blog-hero__quicklinks { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .blog-hero__quicklink {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 10px 14px; border-radius: 999px;
