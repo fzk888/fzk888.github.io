@@ -1,4 +1,5 @@
 <div class="friends-grid">
+{{ if .Page.Params.friends }}
 {{ range .Page.Params.friends }}
 <a class="friend-card" href="{{ .url }}" target="_blank" rel="noopener">
     <img class="friend-card__avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy">
@@ -7,5 +8,6 @@
         <div class="friend-card__desc">{{ .desc }}</div>
     </div>
 </a>
+{{ end }}
 {{ end }}
 </div>
