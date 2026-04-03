@@ -1,6 +1,6 @@
 ---
-title: "Day 9 - 2026年03月29日"
-date: 2026-03-29T16:00:00+08:00
+title: "Day 9 - 2026年03月31日"
+date: 2026-03-31T16:00:00+08:00
 draft: false
 tags: ["碎碎念", "日常", "OpenClaw", "AI"]
 categories: ["碎碎念"]
