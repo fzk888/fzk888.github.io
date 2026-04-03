@@ -4,6 +4,7 @@
 
 /* ===== 导航栏 — 胶囊形毛玻璃 ===== */
 .header--home { position: relative; z-index: 30; overflow: visible; }
+.header { position: relative; z-index: 30; overflow: visible !important; }
 
 .header--home .nav {
   margin-top: 10px; padding: 0 14px; border-radius: 999px;
@@ -23,8 +24,8 @@
 }
 
 @media (min-width:769px) {
-  .header #menu { overflow: visible; }
-  .header .nav  { overflow: visible; }
+  .header #menu { overflow: visible !important; }
+  .header .nav  { overflow: visible !important; }
 }
 
 .header--home #menu a,
