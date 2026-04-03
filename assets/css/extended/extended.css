@@ -281,6 +281,15 @@
   opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
   transform: translateX(-50%) translateY(6px);
 }
+/* 用伪元素填充父菜单和子菜单之间的间隙，确保鼠标移动时不会失去 hover */
+.sub-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
 .menu-item:hover > .sub-menu, .menu-item:focus-within > .sub-menu {
   opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
 }
