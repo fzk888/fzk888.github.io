@@ -58,9 +58,52 @@
     });
   }
 
+  // ===== 下拉菜单增强交互 =====
+  function initDropdownMenu() {
+    var menuItems = document.querySelectorAll('.menu-item-has-children');
+    menuItems.forEach(function(item) {
+      var subMenu = item.querySelector('.sub-menu');
+      if (!subMenu) return;
+
+      var timer = null;
+
+      // 鼠标进入父菜单项
+      item.addEventListener('mouseenter', function() {
+        clearTimeout(timer);
+        subMenu.style.opacity = '1';
+        subMenu.style.visibility = 'visible';
+        subMenu.style.transform = 'translateX(-50%) translateY(0)';
+      });
+
+      // 鼠标离开父菜单项
+      item.addEventListener('mouseleave', function() {
+        timer = setTimeout(function() {
+          subMenu.style.opacity = '0';
+          subMenu.style.visibility = 'hidden';
+          subMenu.style.transform = 'translateX(-50%) translateY(6px)';
+        }, 100);
+      });
+
+      // 鼠标进入子菜单
+      subMenu.addEventListener('mouseenter', function() {
+        clearTimeout(timer);
+      });
+
+      // 鼠标离开子菜单
+      subMenu.addEventListener('mouseleave', function() {
+        timer = setTimeout(function() {
+          subMenu.style.opacity = '0';
+          subMenu.style.visibility = 'hidden';
+          subMenu.style.transform = 'translateX(-50%) translateY(6px)';
+        }, 100);
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initTypewriter();
     initProgressBar();
     initNavScroll();
+    initDropdownMenu();
   });
 })();

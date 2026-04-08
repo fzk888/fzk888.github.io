@@ -4,6 +4,7 @@
 
 /* ===== 导航栏 — 胶囊形毛玻璃 ===== */
 .header--home { position: relative; z-index: 30; overflow: visible; }
+.header { position: relative; z-index: 30; overflow: visible !important; }
 
 .header--home .nav {
   margin-top: 10px; padding: 0 14px; border-radius: 999px;
@@ -23,8 +24,8 @@
 }
 
 @media (min-width:769px) {
-  .header #menu { overflow: visible; }
-  .header .nav  { overflow: visible; }
+  .header #menu { overflow: visible !important; }
+  .header .nav  { overflow: visible !important; }
 }
 
 .header--home #menu a,
@@ -272,13 +273,24 @@
 .menu-item:hover .menu-arrow, .menu-item:focus-within .menu-arrow { transform: rotate(180deg); }
 
 .sub-menu {
-  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; min-width: 140px; padding: 8px;
+  padding-top: 20px; margin-top: -8px;
   border-radius: 18px; border: 1px solid rgba(102,126,234,.12);
   background: rgba(255,255,255,.92); backdrop-filter: blur(18px);
   box-shadow: 0 20px 48px rgba(15,23,42,.12);
   opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
   transform: translateX(-50%) translateY(6px);
+}
+/* 用伪元素填充父菜单和子菜单之间的间隙，确保鼠标移动时不会失去 hover */
+.sub-menu::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  right: -10px;
+  height: 28px;
+  pointer-events: auto;
 }
 .menu-item:hover > .sub-menu, .menu-item:focus-within > .sub-menu {
   opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
