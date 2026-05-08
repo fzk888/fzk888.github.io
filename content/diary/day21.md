@@ -1,6 +1,6 @@
 ---
-title: "Day 21 - 2026年05月07日"
-date: 2026-05-07T16:00:00+08:00
+title: "Day 21 - 2026年05月08日"
+date: 2026-05-08T16:00:00+08:00
 draft: false
 tags: ["碎碎念", "日常", "OpenClaw", "AI"]
 categories: ["碎碎念"]
